@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="site-title">Anthony Kuiau — Graphic Designer &amp; Radio Presenter</title>
+  <meta name="description" id="site-description" content="Anthony Kuiau is a Graphic Designer and Radio Presenter based in Port Moresby, Papua New Guinea." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav-logo" aria-label="Home" id="nav-logo-text">Anthony <span>Kuiau</span></a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Work</a></li>
+      <li><a href="#cv">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <button class="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div class="drawer" role="dialog" aria-label="Mobile navigation">
+    <a href="#about">About</a>
+    <a href="#portfolio">Work</a>
+    <a href="#cv">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero" aria-label="Introduction">
+    <div class="hero-inner">
+      <p class="hero-tag reveal" id="hero-tag">Graphic Designer &amp; Radio Presenter</p>
+      <h1 class="hero-name reveal" id="hero-name">
+        Anthony<br/><em>Kuiau</em>
+      </h1>
+      <p class="hero-sub reveal" id="hero-sub">Port Moresby, Papua New Guinea</p>
+      <div class="hero-ctas reveal">
+        <a href="#portfolio" class="btn btn-fill">See my work</a>
+        <a id="hero-cv-link" href="#" class="btn btn-ghost" target="_blank" rel="noopener" aria-label="Download CV (PDF)">
+          Download CV
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="hero-scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ABOUT -->
+  <section id="about" aria-label="About">
+    <div class="section-wrap">
+      <div class="about-grid">
+        <div>
+          <p class="eyebrow reveal" id="about-eyebrow">About me</p>
+          <h2 class="section-heading reveal" id="about-heading">Design that<br/>connects.</h2>
+          <div class="about-body reveal" id="about-body">
+            <p>Loading...</p>
+          </div>
+          <div class="about-ctas reveal">
+            <a href="#portfolio" class="btn btn-fill">View my work</a>
+            <a href="#contact" class="btn btn-ghost">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="stats-col reveal" id="stats-col">
+          <!-- populated by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" aria-label="Portfolio">
+    <div class="section-wrap">
+      <p class="eyebrow reveal">Selected work</p>
+      <h2 class="section-heading reveal">Projects</h2>
+
+      <div class="filter-row reveal" role="group" aria-label="Filter projects" id="filter-row">
+        <button class="filter-btn active" data-filter="all">All</button>
+      </div>
+
+      <div class="port-grid" id="port-grid">
+        <!-- populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- EXPERIENCE -->
+  <section id="cv" aria-label="Experience and Skills">
+    <div class="section-wrap">
+      <p class="eyebrow reveal">Resume</p>
+      <h2 class="section-heading reveal">Work History &amp;<br/>What I Know</h2>
+
+      <div class="cv-grid">
+        <div class="timeline reveal" id="cv-timeline">
+          <!-- populated by JS -->
+        </div>
+        <div class="skills-block reveal" id="skills-block">
+          <!-- populated by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" style="background:rgba(255,255,255,.08)"></div>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-label="Contact">
+    <div class="section-wrap">
+      <div class="contact-inner">
+        <p class="eyebrow reveal">Get in touch</p>
+        <h2 class="section-heading reveal" id="contact-heading">Let's work<br/>together.</h2>
+        <p class="contact-body reveal" id="contact-body">Have a project in mind? I'd love to hear about it.</p>
+
+        <a id="contact-email-link" href="mailto:" class="contact-email reveal" aria-label="Email">
+          <span id="contact-email-text">loading...</span>
+        </a>
+
+        <div class="contact-ctas reveal">
+          <a id="contact-cv-link" href="#" class="btn btn-fill" target="_blank" rel="noopener">Download CV</a>
+          <a id="contact-email-btn" href="mailto:" class="btn btn-ghost">Email me</a>
+        </div>
+
+        <div class="social-row reveal" id="social-row">
+          <!-- populated by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p id="footer-copy">© 2026 Anthony Kuiau. All rights reserved.</p>
+    <p>Designed &amp; built by <span id="footer-name">Anthony Kuiau</span></p>
+  </footer>
+
+  <!-- Portfolio Modal -->
+  <div id="port-modal" class="port-modal" role="dialog" aria-modal="true" aria-label="Project detail" style="display:none;">
+    <div class="port-modal-backdrop"></div>
+    <div class="port-modal-inner">
+      <button class="port-modal-close" aria-label="Close">&times;</button>
+      <div id="port-modal-content"></div>
+    </div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script type="module" src="js/firebase.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/portfolio.js"></script>
+</body>
+</html>

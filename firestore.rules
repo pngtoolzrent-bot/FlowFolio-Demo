@@ -1,0 +1,20 @@
+// firestore.rules
+// Deploy with: firebase deploy --only firestore:rules
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Public read for all site content (frontend needs this)
+    match /site/{docId}    { allow read: if true; allow write: if false; }
+    match /hero/{docId}    { allow read: if true; allow write: if false; }
+    match /about/{docId}   { allow read: if true; allow write: if false; }
+    match /contact/{docId} { allow read: if true; allow write: if false; }
+    match /projects/{docId}    { allow read: if true; allow write: if false; }
+    match /jobs/{docId}        { allow read: if true; allow write: if false; }
+    match /skillGroups/{docId} { allow read: if true; allow write: if false; }
+
+    // All writes go through the bot backend using Admin SDK (bypasses these rules)
+    // No client-side write access needed
+  }
+}
