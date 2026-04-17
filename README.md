@@ -3,7 +3,7 @@
 A portfolio site (GitHub Pages) + Telegram bot backend (Render) with Firebase Firestore as the database. All content is editable live from Telegram.
 
 ---
-
+g
 ## 📁 Project Structure
 
 ```
